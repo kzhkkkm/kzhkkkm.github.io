@@ -71,6 +71,29 @@ h6 {
 	font-weight: bold;
 }
 
+hmenu1 {
+}
+
+.hmenu1-plain {
+	  
+	font-size: 90%;
+	color: #FFFFFF;
+	padding-right: 13px;
+	padding-left: 13px;
+}
+
+.hmenu1-link0:link {
+	  
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.hmenu1-link0:visited {
+	  
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 now {
 	font-size: 90%;
 }
