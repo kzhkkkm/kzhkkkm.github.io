@@ -1,12 +1,13 @@
 @charset "utf-8";
 body {
 	color: #10187B;
+	width: 800px;
 	margin-top: 2px;
-	margin-right: 2px;
+	margin-right: auto;
 	margin-bottom: 2px;
-	margin-left: 2px;
-	font-size: 90%;
-	font-family:'ヒラギノ丸ゴ Pro W3','Hiragino Maru Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	margin-left: auto;
+	font-size: 100%;
+	font-family:'ヒラギノ丸ゴ Pro W3','Hiragino Maru Gothic Pro','メイリオ','ＭＳ Ｐゴシック';
 	background: #FFFFFF;
 	text-align: center;
 }
@@ -17,81 +18,20 @@ h1 {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	font-size: 160%;
+	font-size: 220%;
 	font-weight: bold;
 }
 
 h2 {  
-	color: #10187B;
+	color: white;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	font-size: 135%;
+	font-size: 100%;
 	font-weight: bold;
-}
-
-h3 {  
-	color: #10187B;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	font-size: 125%;
-	font-weight: bold;
-}
-
-h4 {  
-	color: #10187B;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	font-size: 119%;
-	font-weight: bold;
-}
-
-h5 {  
-	color: #10187B;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	font-size: 110%;
-	font-weight: bold;
-}
-
-h6 {  
-	color: #10187B;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	font-size: 90%;
-	font-weight: bold;
-}
-
-hmenu1 {
-}
-
-.hmenu1-plain {
-	  
-	font-size: 90%;
-	color: #FFFFFF;
-	padding-right: 13px;
-	padding-left: 13px;
-}
-
-.hmenu1-link0:link {
-	  
-	color: #FFFFFF;
-	text-decoration: none;
-}
-
-.hmenu1-link0:visited {
-	  
-	color: #FFFFFF;
-	text-decoration: none;
+	text-align: left;
+	background:#10187B;
 }
 
 now {
@@ -115,16 +55,9 @@ year0 {
 	font-weight: bold;
 }
 
-address {
-	color: #9b9b9b;
-	margin-top: 8px;
-	margin-right: 0px;
-	margin-bottom: 8px;
-	margin-left: 0px;
-}
-
 nav {
 	text-align: center;
+	font-size: 110%;
 }
 
 nav ul {
@@ -135,7 +68,7 @@ nav ul {
 nav ul li {
 	list-style: none;
 	display: inline-block;
-	width: 10%;
+	width: 15%;
 	min-width: 90px;
 }
 
@@ -150,4 +83,9 @@ nav ul li.current a {
 
 nav ul li a:hover {
 	color: #E7DA66;
+}
+
+p {
+	text-align: left;
+	margin-left: 20px;
 }
