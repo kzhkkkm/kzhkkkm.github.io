@@ -39,8 +39,12 @@ p {
 	margin-left: 20px;
 }
 
+ol {
+	text-align: left;
+}
+
 a:link {
-	color: #10187B
+	color: #10187B;
 }
 
 a:visited {
@@ -79,7 +83,7 @@ nav ul li.current a {
 }
 
 nav ul li a:hover {
-	color: #10187B;
+	color: #6666FF;
 	
 }
 
