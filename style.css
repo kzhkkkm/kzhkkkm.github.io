@@ -131,7 +131,26 @@ a{
   transition: .3s;
 }
 
-a:hover{
-  background-position: -100% 0;
-  color: #fff;
+nav {
+	text-align: center;
+}
+nav ul {
+	margin: 0 ;
+	padding: 0 ;
+}
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	width: 10%;
+	min-width: 90px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #10187B;
+}
+nav ul li.current a {
+	color: #F33135;
+}
+nav ul li a:hover {
+	color: #E7DA66;
 }
