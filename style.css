@@ -16,10 +16,11 @@ h1 {
 	color: #10187B;
 	margin-top: 0px;
 	margin-right: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	margin-left: 0px;
 	font-size: 220%;
 	font-weight: bold;
+	text-align: left;
 }
 
 h2 {  
@@ -28,7 +29,7 @@ h2 {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	font-size: 100%;
+	font-size: 110%;
 	font-weight: bold;
 	text-align: left;
 	background:#10187B;
@@ -41,6 +42,7 @@ p {
 
 ol {
 	text-align: left;
+	margin-left: 20px;
 }
 
 a:link {
