@@ -34,25 +34,22 @@ h2 {
 	background:#10187B;
 }
 
-now {
-	font-size: 90%;
+p {
+	text-align: left;
+	margin-left: 20px;
 }
 
-year {
-	color: #000000;
-	font-size: 110%;
-	font-weight: bold;
+a:link {
+	color: #10187B
 }
 
-old {
-	color: #cccccc;
-	font-size: 90%;
+a:visited {
+	color: #10187B;
 }
 
-year0 {
-	color: #cccccc;
-	font-size: 110%;
-	font-weight: bold;
+a:hover {
+	color: #6666FF;
+	text-decoration: underline;
 }
 
 nav {
@@ -82,10 +79,27 @@ nav ul li.current a {
 }
 
 nav ul li a:hover {
-	color: #E7DA66;
+	color: #10187B;
+	
 }
 
-p {
-	text-align: left;
-	margin-left: 20px;
+now {
+	font-size: 90%;
+}
+
+old {
+	color: #cccccc;
+	font-size: 90%;
+}
+
+year {
+	color: #000000;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+year0 {
+	color: #cccccc;
+	font-size: 110%;
+	font-weight: bold;
 }
