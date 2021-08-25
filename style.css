@@ -34,6 +34,17 @@ h2 {
 	background:#10187B;
 }
 
+h3 { 
+	color: black;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+}
+
 nav {
 	text-align: center;
 	font-size: 110%;
