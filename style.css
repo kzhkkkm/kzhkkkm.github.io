@@ -91,22 +91,24 @@ a:hover {
 }
 
 now {
-	font-size: 90%;
+	margin-left: 20px;
 }
 
 old {
 	color: #cccccc;
-	font-size: 90%;
+	margin-left: 20px;
 }
 
 year {
 	color: #000000;
+	margin-top: 20px;
 	font-size: 110%;
 	font-weight: bold;
 }
 
 year0 {
 	color: #cccccc;
+	margin-top: 20px;
 	font-size: 110%;
 	font-weight: bold;
 }
