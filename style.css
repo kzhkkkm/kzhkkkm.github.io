@@ -9,7 +9,6 @@ body {
 	font-size: 100%;
 	font-family:'ヒラギノ丸ゴ Pro W3','Hiragino Maru Gothic Pro','メイリオ','ＭＳ Ｐゴシック';
 	background: #FFFFFF;
-	text-align: center;
 }
 
 h1 { 
@@ -35,29 +34,6 @@ h2 {
 	background:#10187B;
 }
 
-p {
-	text-align: left;
-	margin-left: 20px;
-}
-
-ol {
-	text-align: left;
-	margin-left: 20px;
-}
-
-a:link {
-	color: #10187B;
-}
-
-a:visited {
-	color: #10187B;
-}
-
-a:hover {
-	color: #6666FF;
-	text-decoration: underline;
-}
-
 nav {
 	text-align: center;
 	font-size: 110%;
@@ -69,9 +45,10 @@ nav ul {
 }
 
 nav ul li {
+	text-align: center;
 	list-style: none;
 	display: inline-block;
-	width: 15%;
+	width: 18%;
 	min-width: 90px;
 }
 
@@ -81,12 +58,37 @@ nav ul li a {
 }
 
 nav ul li.current a {
-	color: #F33135;
+	color: #cccccc;
 }
 
 nav ul li a:hover {
+	color: #6666FF;	
+}
+
+p {
+	margin-left: 20px;
+}
+
+ol {
+	margin-left: 20px;
+}
+
+ol {
+	margin-left: 20px;
+}
+
+a:link {
+	text-decoration: none;
 	color: #6666FF;
-	
+}
+
+a:visited {
+	color: #10187B;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #6666FF;
 }
 
 now {
