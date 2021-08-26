@@ -3,7 +3,16 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<title>Link</title>
+		<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+			MathJax.Hub.Config({
+			imageFont: null,
+			extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js","TeX/noErrors.js","TeX/noUndefined.js"],
+			jax: ["input/TeX","output/HTML-CSS"],
+			tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ], processEscapes: true},
+			TeX: {Macros: {N: '\mathcal{N}', U: '\mathcal{U}'}}
+			});
+		</script>
+		<title>基本演習　統計学</title>
 	</head>
 	<body>
 		<ul class="menu">
@@ -21,6 +30,341 @@
 		<h2>&nbsp;</h2>
 		<p align="center"><img src="stats.jpg"></p>
 		<h2>&nbsp;&nbsp;正誤表</h2>
-		<p><a href="https://www.econ.nagoya-cu.ac.jp/~kakamu/stats.html">サポートページ</a></p>
+		<h3>初版第2刷以降訂正済み</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">121</td>
+					<td valign="center" rowspan="2">確認4.5 (2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>帰無仮説が正しいとき，<font color="red">帰無仮説</font>が従う分布はどのような分布ですか。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>帰無仮説が正しいとき，<font color="red">検定統計量</font>が従う分布はどのような分布ですか。</td>
+				</tr>
+				<tr>
+					<td align="right" rowspan="2">162</td>
+					<td rowspan="2">確認5.2 (1)</td>
+					<th valign="center" align="center" bgcolor="#bdbdbd">誤</th>
+					<td>また，臨界値は<font color="red">$t_{n-2,\alpha/2}$</font>なので，$\pm 2.042$となります。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>また，臨界値は<font color="red">$t_{n-(K+1),\alpha/2}$</font>なので，$\pm 2.042$となります。</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>初版第3刷以降訂正済み</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">9</td>
+					<td valign="center" rowspan="2">確認1.2 (2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>さらに<font color="red">100通</font>のメールを受け取ったとき，<font color="red">10通</font>が迷惑メールでした。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>さらに<font color="red">300通</font>のメールを受け取ったとき，<font color="red">40通</font>が迷惑メールでした。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">13</td>
+					<td valign="center" rowspan="2">性質 1.1</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \left( \prod_{i=1}^{n} x_{i} \right) \left( \prod_{j=1}^{n} y_{j} \right) = \prod_{i=1}^{n} \prod_{j=1}^{n} x_{i} y_{j}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \left( \prod_{i=1}^{n} x_{i} \right) \left( \prod_{j=1}^{n} y_{j} \right) = \prod_{i=1}^{n} x_{i} y_{i}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">88</td>
+					<td valign="center" rowspan="2">例題3.4</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>アルバイト<font color="red">の平均時給</font>に関するアンケートを行うことを考えています。以下の問に答えなさい。<br>
+						(1) 0.95以上の確率で<font color="red">平均$\mu$</font>を誤差0.1以下で推定するにはどのくらいの大きさの標本が必要か求めなさい。<br>
+						(2) 調べたい対象をある大学の経済学部の学生に限定すると，母集団は1000人だとします。このとき0.95以上の確率で<font color="red">平均$\mu$</font>を誤差0.1以下で推定するにはどのくらいの大きさの標本が必要か求めなさい。
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>アルバイト<font color="red">をしているかどうかの割合</font>に関するアンケートを行うことを考えています。<br>
+						(1) 0.95以上の確率で<font color="red">割合$p$</font>を誤差0.1以下で推定するにはどのくらいの大きさの標本が必要か求めなさい。<br>
+						(2) 調べたい対象をある大学の経済学部の学生に限定すると，母集団は1000人だとします。このとき0.95以上の確率で<font color="red">割合$p$</font>を誤差0.1以下で推定するにはどのくらいの大きさの標本が必要か求めなさい。
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">89</td>
+					<td valign="center" rowspan="2">例題3.4の解答 (1)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>0.95以上の確率で<font color="red">平均$\mu$</font>を誤差0.1以下で推定するために必要な標本サイズは97以上となります。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>0.95以上の確率で<font color="red">割合$p$</font>を誤差0.1以下で推定するために必要な標本サイズは97以上となります。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">89</td>
+					<td valign="center" rowspan="2">例題3.4の解答 (2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>0.95以上の確率で<font color="red">平均$\mu$</font>を誤差0.1以下で推定するために必要な標本サイズは88以上となります。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>0.95以上の確率で<font color="red">割合$p$</font>を誤差0.1以下で推定するために必要な標本サイズは88以上となります。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">132</td>
+					<td valign="center" rowspan="2">掲載結果</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td width="80"></td><td width="80">係数</td><td width="80">標準誤差</td><td width="80">t</td><td width="80">P-値</td>
+							</tr>
+							<tr>
+								<td>切片</td><td>1.949</td><td>0.454</td><td>4.291</td><td>0.000</td>
+							</tr>
+							<tr>
+								<td><font color="red">X 値 1</font></td><td><font color="red">0.499</font></td><td><font color="red">0.070</font></td><td><font color="red">7.144</font></td><td><font color="red">0.000</font></td>
+							</tr>
+							<tr>
+								<td><font color="red">X 値 2</font></td><td><font color="red">0.592</font></td><td><font color="red">0.061</font></td><td><font color="red">9.754</font></td><td><font color="red">0.000</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td width="80"></td><td width="80">係数</td><td width="80">標準誤差</td><td width="80">t</td><td width="80">P-値</td>
+							</tr>
+							<tr>
+								<td>切片</td><td>1.949</td><td>0.454</td><td>4.291</td><td>0.000</td>
+							</tr>
+							<tr>
+								<td><font color="red">X 値 1</font></td><td><font color="red">0.592</font></td><td><font color="red">0.061</font></td><td><font color="red">9.754</font></td><td><font color="red">0.000</font></td>
+							</tr>
+							<tr>
+								<td><font color="red">X 値 2</font></td><td><font color="red">0.499</font></td><td><font color="red">0.070</font></td><td><font color="red">7.144</font></td><td><font color="red">0.000</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">147</td>
+					<td valign="center" rowspan="2">確認1.2 (2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>さらに<font color="red">100通</font>のメールを受け取ったとき，<font color="red">$P(A) = 30/200 = 0.15$</font>，$P(A^{c}) = 0.85$，...</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>さらに<font color="red">300通</font>のメールを受け取ったとき，<font color="red">$P(A) = 60/400 = 0.15$</font>，$P(A^{c}) = 0.85$，...</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">152</td>
+					<td valign="center" rowspan="2">確認1.13</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>$\displaystyle \log f(a) = - \frac{1}{2} \sum_{i=1}^{n}(x_{i} - a)^{2}$なので，<font color="red">$\displaystyle (\log f(a))' = - \sum_{i=1}^{n}(x_{i} - a) = 0$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>$\displaystyle \log f(a) = - \frac{1}{2} \sum_{i=1}^{n}(x_{i} - a)^{2}$なので，<font color="red">$\displaystyle (\log f(a))' = \sum_{i=1}^{n}(x_{i} - a) = 0$</font></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>初版第4刷以降訂正済み</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">13</td>
+					<td valign="center" rowspan="2">性質 1.1</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \left( \prod_{i=1}^{n} x_{i} \right) \left( \prod_{j=1}^{n} y_{j} \right) = \prod_{i=1}^{n} x_{i} y_{j}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \left( \prod_{i=1}^{n} x_{i} \right) \left( \prod_{j=1}^{n} y_{j} \right) = \prod_{i=1}^{n} x_{i} y_{i}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">43</td>
+					<td valign="center" rowspan="2">例題 2.2の解答(2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle E[W] = E[10 X^{2}] = 10 \sum_{i=1}^{6}x^{2}p(x_{i})$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle E[W] = E[10 X^{2}] = 10 \sum_{i=1}^{6}x_{i}^{2}p(x_{i})$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">71</td>
+					<td valign="center" rowspan="2">定義 2.16</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>がすべての<font color="red">$x_{i}$と$x_{j}$</font>の組み合わせに対して...</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>がすべての<font color="red">$x_{i}$と$y_{j}$</font>の組み合わせに対して...</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">71</td>
+					<td valign="center" rowspan="2">Comment 2.14</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle p(x_{1}, x_{2},\ldots,x_{n}) = \prod_{i=1}^{n} p^{x_{i}}(1-p)^{x_{i}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle p(x_{1}, x_{2},\ldots,x_{n}) = \prod_{i=1}^{n} p^{x_{i}}(1-p)^{1-x_{i}}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">98</td>
+					<td valign="center" rowspan="2">Comment 4.1の(4.2)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \frac{\bar{x} - \mu_{0}}{\sqrt{\frac{\sigma^{2}}{n}}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \frac{\bar{X} - \mu_{0}}{\sqrt{\frac{\sigma^{2}}{n}}}$</font></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>初版第5刷以降訂正済み</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">119</td>
+					<td valign="center" rowspan="2">例題4.7の解答</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>与えられた観測度数から，...，<font color="red">$P(B_{2}) = n_{\cdot 1}/n = 105/200=0.525$</font>となります。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>与えられた観測度数から，...，<font color="red">$P(B_{2}) = n_{\cdot 2}/n = 105/200=0.525$</font>となります。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">132</td>
+					<td valign="center" rowspan="2">例題 5.3の解答</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>したがって，$\widehat{\ln{A}} = 1.949$，<font color="red">$\hat{\gamma} = 0.499$，$\hat{\delta} = 0.592$</font>です。</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>したがって，$\widehat{\ln{A}} = 1.949$，<font color="red">$\hat{\gamma} = 0.592$，$\hat{\delta} = 0.499$</font>です。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">147</td>
+					<td valign="center" rowspan="2">確認 1.1 (2)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>(1)と同様に，<font color="red">$p(2|X=2)$</font>$=0.11/(0.01+0.01+0.11) = 11/13$</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>(1)と同様に，<font color="red">$P(2|X=2)$</font>$=0.11/(0.01+0.01+0.11) = 11/13$</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>初版第6刷以降訂正済み</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">71</td>
+					<td valign="center" rowspan="2">Comment 2.14</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>離散確率変数の同時確率関数と<font color="red">周辺確率変数</font>は，</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>離散確率変数の同時確率関数と<font color="red">周辺確率関数</font>は，</td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">132</td>
+					<td valign="center" rowspan="2">例題 5.3の解答</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\ln K_{i}$</font>，<font color="red">$\ln L_{i}$</font>の順にデータを並べると，「X値 1」は<font color="red">$\ln K_{i}$</font>，「X値 2」は<font color="red">$\ln L_{i}$</font>の結果が出力されます。したがって，<font color="red">$\widehat{\ln{A}} = 1.949$</font>，$\hat{\gamma} = 0.592$，$\hat{\delta} = 0.499$です。また，<font color="red">$\widehat{\ln{A}} = 1.949$</font>なので</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\log K_{i}$</font>，<font color="red">$\log L_{i}$</font>の順にデータを並べると，「X値 1」は<font color="red">$\log K_{i}$</font>，「X値 2」は<font color="red">$\log L_{i}$</font>の結果が出力されます。したがって，<font color="red">$\widehat{\log{A}} = 1.949$</font>，$\hat{\gamma} = 0.592$，$\hat{\delta} = 0.499$です。また，<font color="red">$\widehat{\log{A}} = 1.949$</font>なので<font color="red"></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">137</td>
+					<td valign="center" rowspan="2">例題 5.5の解答</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \ln Y_{i} = \ln A + \gamma^{*} \ln K_{i} + \sum_{j=1}^{5} \gamma_{j}d_{ji}\ln K_{i} + \delta \ln L_{i} + \epsilon_{i}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \log Y_{i} = \log A + \gamma^{*} \log K_{i} + \sum_{j=1}^{5} \gamma_{j}d_{ji}\log K_{i} + \delta \log L_{i} + \epsilon_{i}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="right" rowspan="2">137</td>
+					<td valign="center" rowspan="2">例題 5.5の解答</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$x_{7i} = \ln L_{i}$，$\alpha = \ln A^{*}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$x_{7i} = \log L_{i}$，$\alpha = \log A$</font></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>初版第6刷以降での用語の変更</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="40%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="60%" colspan="2" bgcolor="#bdbdbd">変　更</th>
+				</tr>
+				<tr>
+					<td valign="center" rowspan="2">63, 66, 145, 146, 155, 索引</td>
+					<th valign="center" align="center" width="5%">前</th>
+					<td><font color="red">確率点</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center">後</th>
+					<td><font color="red">分位点</font></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>現在残っている箇所</h3>
+		<table cellspacing="0" cellpadding="1" width="100%" border="1" bgcolor=#dedede bordercolor="#10187B">
+			<tbody>
+				<tr align="left">
+					<th align="center" valign="center" width="5%" bgcolor="#bdbdbd">頁</th>
+					<th align="center" valign="center" width="17%" bgcolor="#bdbdbd">場所</th>
+					<th align="center" valign="center" width="78%" colspan="2" bgcolor="#bdbdbd">正　誤</th>
+				</tr>
+			</tbody>
+		</table>
+		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
+		<p align="right">2020年5月29日現在</p>
 	</body>
 </html>
