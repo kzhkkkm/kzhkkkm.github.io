@@ -45,36 +45,50 @@ h3 {
 	text-align: left;
 }
 
-nav {
+.menu {
 	text-align: center;
 	font-size: 110%;
-}
-
-nav ul {
+	list-style-type:none;
 	margin: 0 ;
 	padding: 0 ;
 }
 
-nav ul li {
+.menu li {
 	text-align: center;
 	list-style: none;
 	display: inline-block;
-	width: 18%;
+	width: 15%;
 	min-width: 90px;
 }
 
-nav ul li a {
+.menu li a {
 	text-decoration: none;
 	color: #10187B;
 }
 
-nav ul li.current a {
+.menu li.current a {
 	color: #cccccc;
 }
 
-nav ul li a:hover {
+.menu li a:hover {
 	color: #6666FF;	
 }
+
+.menu > li > ul {
+	display: none;
+}
+
+.menu > li:hover ul {
+	display: block;
+	position: absolute;
+	list-style-type: one;
+}
+
+.menu li li{
+	overflow: hidden;
+	width: 100%
+}
+
 
 p {
 	margin-left: 20px;
