@@ -99,16 +99,17 @@ ol {
 }
 
 a:link {
-	color: #10187B;
+	text-decoration: none;
+	color: #000000;
 }
 
 a:visited {
-	color: #10187B;
+	color: #6666FF;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: #6666FF;
+	color: #10187B;
 }
 
 now {
