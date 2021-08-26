@@ -86,6 +86,7 @@ h3 {
 
 .menu li li{
 	overflow: hidden;
+	text-align: left;
 	width: 100%
 }
 
