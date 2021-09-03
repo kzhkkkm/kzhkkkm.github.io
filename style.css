@@ -71,7 +71,8 @@ h3 {
 }
 
 .menu li a:hover {
-	color: #6666FF;	
+	text-decoration: underline;
+	color: #6666FF;
 }
 
 .menu > li > ul {
