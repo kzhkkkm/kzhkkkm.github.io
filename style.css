@@ -96,6 +96,10 @@ p {
 	margin-left: 20px;
 }
 
+table {
+	font-size: 100%;
+}
+
 ol {
 	margin-left: 5px;
 }
