@@ -70,6 +70,10 @@ h3 {
 	color: #cccccc;
 }
 
+.menu li.notcurrent a {
+	color: #10187B;
+}
+
 .menu li a:hover {
 	text-decoration: underline;
 	color: #6666FF;
