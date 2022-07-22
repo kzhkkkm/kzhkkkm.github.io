@@ -75,6 +75,17 @@
 				</tr>
 				<tr>
 					<td valign="center" align="center" rowspan="2">98</td>
+					<td valign="center" rowspan="2">最初の式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \times \prod_{j=1}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}}{(n_{j} - n_{j-1})!}$</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \times \prod_{j=2}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}}{(n_{j} - n_{j-1})!}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">98</td>
 					<td valign="center" rowspan="2">(4.11)式</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
 					<td><font color="red">$\displaystyle \times \prod_{j=1}^{k} f(x_{j}|\mu,\sigma^{2}) \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}}{(n_{j} - n_{j-1} - 1)}$</font>
@@ -82,7 +93,18 @@
 				</tr>
 				<tr>
 					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
-					<td><font color="red">$\displaystyle \times \prod_{j=1}^{k} f(x_{j}|\mu,\sigma^{2}) \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}}{(n_{j} - n_{j-1} - 1)!}$</font></td>
+					<td><font color="red">$\displaystyle \times \prod_{j=2}^{k} f(x_{j}|\mu,\sigma^{2}) \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}}{(n_{j} - n_{j-1} - 1)!}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">99</td>
+					<td valign="center" rowspan="2">(4.13)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \times \prod_{j=1}^{k} f(x_{j}|\mu,\sigma^{2}) \left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}$</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \times \prod_{j=2}^{k} f(x_{j}|\mu,\sigma^{2}) \left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}-1}$</font></td>
 				</tr>
 				<tr>
 					<td valign="center" align="center" rowspan="2">191</td>
