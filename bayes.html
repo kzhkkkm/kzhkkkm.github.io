@@ -128,11 +128,20 @@
 					<td>この例では，上に2つ，下に<font color="red">4つ</font>外れ値が存在することがわかります。
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">162</td>
+					<td valign="center" rowspan="2">(6.18)式の上</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \propto \left( \sigma^{2} \right)^{-\left( \frac{T + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{y} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{y} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \propto \left( \sigma^{2} \right)^{-\left( \frac{T + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{z} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)$</font></td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">176</td>
 					<td valign="center" rowspan="2">A.2.3の上</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
-					<td><font color="red">source( "function.r" )やsource( "MCMC.r" )とすれば，</font>読み込むことができます。実行したいファイルと異なる場所にあっても，<font color="red">source( "相対パス/function.r" )やsource( "相対パス/fMCMC.r" )とすれば，</font>読み込むことができます。
-					</td>
+					<td><font color="red">source( "function.r" )やsource( "MCMC.r" )とすれば，</font>読み込むことができます。実行したいファイルと異なる場所にあっても，<font color="red">source( "相対パス/function.r" )やsource( "相対パス/fMCMC.r" )とすれば，</font>読み込むことができます。</td>
 				</tr>
 				<tr>
 					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
