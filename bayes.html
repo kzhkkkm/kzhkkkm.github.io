@@ -84,6 +84,58 @@
 					<td>すべてのMCMC標本を用いた場合(左)と<font color="red">$p=10$</font>としてシニングを行った場合(右)の時系列プロット(上段)と自己相関係数(下段)</td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">76</td>
+					<td valign="center" rowspan="2">第2パラグラフ</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>表3.6には事後推測の結果として，...，事後平均がどちらも$1$に非常に近い値となっています。つまり，<font color="red">どちらの方法を用いても事後平均の推定結果自体に違いは無いのですが，事後標準偏差や$95$%信用区間をみてみると，MHアルゴリズムの方が事後標準偏差は小さく，$95$%信用区間も狭いことがわかります。</font>より詳しくみるために，図3.10に，MCMC標本の時系列プロットと，カーネル密度，自己相関係数の図を示しました。<font color="red">時系列プロットとカーネル密度をみれば，MHアルゴリズムの方が事後標準偏差が小さく$95$%信用区間も狭いことは明らかでしょう。しかしながら，自己相関係数には大きな違いがありません。つまり，MCMC標本の混合の観点からみればどちらの方法を用いても変わりは無いといえます。</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>表3.6には事後推測の結果として，...，事後平均がどちらも$1$に非常に近い値となっています。つまり，<font color="red">どちらの方法を用いても事後平均の推定結果自体に違いは無いことがわかります。</font>より詳しくみるために，図3.10に，MCMC標本の時系列プロットと，カーネル密度，自己相関係数の図を示しました。<font color="red">時系列プロットとカーネル密度には大きな違いを見ることができません。しかしながら，自己相関係数はデータ拡大法の方が早く自己相関係数が$0$に到達していることを確認することができます。つまり，MCMC標本の混合の観点からみればデータ拡大法を利用した方がよいことがわかります${}^{14}$。</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">76</td>
+					<td valign="center" rowspan="2">表3.6</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td>$t$分布</td><td>データ拡大法</td><td><font color="red">$1.039$</font></td><td><font color="red">$0.160$</font></td><td><font color="red">$0.762$</font></td><td><font color="red">$1.388$</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td>$t$分布</td><td>データ拡大法</td><td><font color="red">$1.018$</font></td><td><font color="red">$0.104$</font></td><td><font color="red">$0.831$</font></td><td><font color="red">$1.238$</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">77</td>
+					<td valign="center" rowspan="2">図3.10</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><img src="t-comparison-old.pdf"></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><img src="t-comparison.pdf"></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">77</td>
+					<td valign="center" rowspan="2">第1パラグラフ</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">それでは，何故MHアルゴリズムの方が事後標準偏差が小さく$95$\%信用区間も狭くなったのでしょうか。...。また，自己相関係数をみてもほとんど変わりが無いので，この場合にはMHアルゴリズムを採用した方がいいと考えられます${}^{14}$。</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>削除</td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">82</td>
 					<td valign="center" rowspan="2">3.4.3の上</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -92,6 +144,38 @@
 				<tr>
 					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
 					<td>非効率性因子の計算においては，...，実際には計算することは<font color="red">できません</font>。</td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">84</td>
+					<td valign="center" rowspan="2">表3.10</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td>データ拡大法</td><td><font color="red">$0.185$</font></td><td><font color="red">$4.157$</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<table cellspacing="0" cellpadding="1" border="1" bordercolor="#10187B">
+							<tr>
+								<td>データ拡大法</td><td><font color="red">$0.175$</font></td><td><font color="red">$2.166$</font></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">84</td>
+					<td valign="center" rowspan="2">第2パラグラフ</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>最後に，表3.10には，...。そして，IFをみると，<font color="red">どちらのアルゴリズムを用いても，効率性はほとんど変わらないことから，どちらのアルゴリズムの方がよいかの判断はできません。従って，3.3.3節でみたように，信用区間の観点から，MHアルゴリズムを用いた方がよいという判断に至ったわけです。</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>最後に，表3.10には，...。そして，IFをみると，<font color="red">データ拡大法を用いた方が非効率性因子が小さいことがわかります。従って，3.3.3節でみたように，混合の観点から，データ拡大法を用いた方がよいという判断に至ったわけです。</font></td>
 				</tr>
 				<tr>
 					<td valign="center" align="center" rowspan="2">97</td>
@@ -231,6 +315,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2022年11月16日更新</p>
+		<p align="right">2022年11月17日更新</p>
 	</body>
 </html>
