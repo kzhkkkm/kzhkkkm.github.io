@@ -74,6 +74,47 @@
 					<td><font color="red">$p$と$q$</font>の事後分布と$95$%信用区間(塗りつぶし部分)</td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">35</td>
+					<td valign="center" rowspan="2">(2.24)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \log L(\mathbf{x} | \mu, \sigma^{2}) = -\frac{T}{2} \log \left( 2 \pi \right) - \frac{1}{2}\log \left( \sigma^{2} \right) - \frac{\sum_{t=1}^{T} \left( x_{t} - \mu \right)^{2}}{2 \sigma^{2}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \log L(\mathbf{x} | \mu, \sigma^{2}) = -\frac{T}{2} \log \left( 2 \pi \right) - \frac{T}{2}\log \left( \sigma^{2} \right) - \frac{\sum_{t=1}^{T} \left( x_{t} - \mu \right)^{2}}{2 \sigma^{2}}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">35</td>
+					<td valign="center" rowspan="2">となり，の下の式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \frac{\partial^{2} \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \mu \partial \sigma^{2}} = \frac{\partial \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \sigma^{2} \partial \mu} = \frac{T \mu - \sum_{t=1}^{T}x_{t}}{\left( \sigma^{2} \right)^{2}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \frac{\partial^{2} \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \mu \partial \sigma^{2}} = \frac{\partial^{2} \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \sigma^{2} \partial \mu} = \frac{T \mu - \sum_{t=1}^{T}x_{t}}{\left( \sigma^{2} \right)^{2}}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">54</td>
+					<td valign="center" rowspan="2">(3.9)式の上</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>$X_{t-1} = x_{t-1}$であったときの$X_{t}$の条件付き分布は，<font color="red">$\mathcal{N}(\rho x_{t-1}, \sigma^{2})$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>$X_{t-1} = x_{t-1}$であったときの$X_{t}$の条件付き分布は，<font color="red">$\mathcal{N}(\phi x_{t-1}, \sigma^{2})$</font></td>
+				</tr>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">54</td>
+					<td valign="center" rowspan="2">1番下の式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle f(x_{0},x_{1},\ldots,x_{T}) = f_{0}(x_{0})\prod_{t=1}^{T}f(x_{t}|x_{t-1},\rho,\sigma^{2})$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle f(x_{0},x_{1},\ldots,x_{T}) = f_{0}(x_{0})\prod_{t=1}^{T}f(x_{t}|x_{t-1},\phi,\sigma^{2})$</font></td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">59</td>
 					<td valign="center" rowspan="2">図3.4</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -355,6 +396,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2025年9月15日更新</p>
+		<p align="right">2025年10月21日更新</p>
 	</body>
 </html>
