@@ -135,6 +135,30 @@
 					<td>すべてのMCMC標本を用いた場合(左)と<font color="red">$p=10$</font>としてシニングを行った場合(右)の時系列プロット(上段)と自己相関係数(下段)</td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">69</td>
+					<td valign="center" rowspan="2">(3.16)</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+						\begin{align*}
+						\propto \exp\left\{ -\frac{\mu^{2} - 2 \mu \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1} \left( \tau_{0}^{-2}\mu_{0} + \sigma^{-2} \sum_{i=1}^{n}x_{i} \right)}{2 \left( \tau_{0}^{2} + \sigma^{-2} n \right)^{-1}} \right\}\\
+						\propto \exp\left[ -\frac{\left\{ \mu - \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1}\left( \tau_{0}^{-2}\mu_{0} + \sigma^{-2} \sum_{i=1}^{n}x_{i} \right) \right\}^{2}}{2 \left( \tau_{0}^{2} + \sigma^{-2} n \right)^{-1}} \right]
+						\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+						\begin{align*}
+						\propto \exp\left\{ -\frac{\mu^{2} - 2 \mu \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1} \left( \tau_{0}^{-2}\mu_{0} + \sigma^{-2} \sum_{i=1}^{n}x_{i} \right)}{2 \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1}} \right\}\\
+						\propto \exp\left[ -\frac{\left\{ \mu - \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1}\left( \tau_{0}^{-2}\mu_{0} + \sigma^{-2} \sum_{i=1}^{n}x_{i} \right) \right\}^{2}}{2 \left( \tau_{0}^{-2} + \sigma^{-2} n \right)^{-1}} \right]
+						\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">76</td>
 					<td valign="center" rowspan="2">第2パラグラフ</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -406,6 +430,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2025年10月22日更新</p>
+		<p align="right">2025年11月9日更新</p>
 	</body>
 </html>
