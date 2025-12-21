@@ -276,12 +276,27 @@
 					<td valign="center" align="center" rowspan="2">98</td>
 					<td valign="center" rowspan="2">最初の式</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
-					<td><font color="red">$\displaystyle \times \prod_{j=1}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}}}{(n_{j} - n_{j-1})!}$</font>
+					<td>
+						<font color="red">
+							\begin{align*}
+							L(\mathbf{x}|\mathbf{n},\mu,\sigma^{2}) &= n! \frac{F(x_{1}|\mu,\sigma^{2})^{n_{1}}}{n_{1}!}\\
+							&\quad \times \prod_{j=1}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}}}{(n_{j} - n_{j-1})!}\\
+							&\quad \times \frac{\left\{ 1 - F(x_{k})  \right\}^{n - n_{k}}}{(n-n_{k})!}
+							\end{align*}
+						</font>
 					</td>
 				</tr>
 				<tr>
 					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
-					<td><font color="red">$\displaystyle \times \prod_{j=2}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}}}{(n_{j} - n_{j-1})!}$</font></td>
+					<td>
+						<font color="red">
+							\begin{align*}
+							L(\mathbf{n}|\mathbf{x},\mu,\sigma^{2}) &= n! \frac{F(x_{1}|\mu,\sigma^{2})^{n_{1}}}{n_{1}!}\\
+							&\quad \times \prod_{j=2}^{k} \frac{\left\{ F(x_{j}|\mu,\sigma^{2}) - F(x_{j-1}|\mu,\sigma^{2}) \right\}^{n_{j}-n_{j-1}}}{(n_{j} - n_{j-1})!}\\
+							&\quad \times \frac{\left\{ 1 - F(x_{k})  \right\}^{n - n_{k}}}{(n-n_{k})!}
+							\end{align*}
+						</font>
+					</td>
 				</tr>
 				<tr>
 					<td valign="center" align="center" rowspan="2">98</td>
@@ -428,6 +443,16 @@
 					<td><font color="red">sData <- read.csv( "../Data/mi.csv" )</font></td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">195</td>
+					<td valign="center" rowspan="2">多項分布</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle f(\mathbf{x}|n,\mathbf{p}) = \dfrac{n!}{\prod_{i=1}^{k}x_{k}!}\prod_{i=1}^{k}p_{i}^{x_{i}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle f(\mathbf{x}|n,\mathbf{p}) = \dfrac{n!}{\prod_{i=1}^{k}x_{i}!}\prod_{i=1}^{k}p_{i}^{x_{i}}$</font></td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">207</td>
 					<td valign="center" rowspan="2">アルゴリズム(2)</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -440,6 +465,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2025年11月11日更新</p>
+		<p align="right">2025年12月21日更新</p>
 	</body>
 </html>
