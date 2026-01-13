@@ -363,14 +363,129 @@
 					<td>この例では，上に2つ，下に<font color="red">4つ</font>外れ値が存在することがわかります。
 				</tr>
 				<tr>
-					<td valign="center" align="center" rowspan="2">162</td>
-					<td valign="center" rowspan="2">(6.18)式の上</td>
+					<td valign="center" align="center" rowspan="2">153</td>
+					<td valign="center" rowspan="2">(6.5)式</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
-					<td><font color="red">$\displaystyle \propto \left( \sigma^{2} \right)^{-\left( \frac{T + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{y} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{y} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)$</font></td>
+					<td><font color="red">${\boldsymbol \beta} \sim \mathcal{N}({\boldsymbol \beta}_{0}, \boldsymbol{\Sigma}_{0})$</font>
+					</td>
 				</tr>
 				<tr>
 					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
-					<td><font color="red">$\displaystyle \propto \left( \sigma^{2} \right)^{-\left( \frac{T + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{z} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)$</font></td>
+					<td><font color="red">${\boldsymbol \beta} \sim \mathcal{N}_{k}({\boldsymbol \beta}_{0}, \boldsymbol{\Sigma}_{0})$</font>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">160</td>
+					<td valign="center" rowspan="2">(6.11)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							y_{t} &= 
+							\left\{
+							\begin{array}{ll}
+							z_{t} & \text{if $z_{t} > 0$}\\
+							0 & \text{if $z_{t} \le 0$}
+							\end{array}
+							\right.\\
+							z_{i} &= \mathbf{x}_{t}^{\prime} {\boldsymbol \beta} + \epsilon_{t},\quad \epsilon_{t} \sim \mathcal{N}(0, \sigma^{2})
+							\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							y_{i} &= 
+							\left\{
+							\begin{array}{ll}
+							z_{i} & \text{if $z_{i} > 0$}\\
+							0 & \text{if $z_{i} \le 0$}
+							\end{array}
+							\right.\\
+							z_{i} &= \mathbf{x}_{i}^{\prime} {\boldsymbol \beta} + \epsilon_{i},\quad \epsilon_{i} \sim \mathcal{N}(0, \sigma^{2})
+							\end{align*}
+						</font>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">160</td>
+					<td valign="center" rowspan="2">(6.12)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							L(\mathbf{y} | {\boldsymbol \beta}, \sigma^{2},\mathbf{X}) &= \prod_{y_{t} >0} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp\left\{ -\frac{(y_{t} - \mathbf{x}_{i}^{\prime} {\boldsymbol \beta})^{2}}{2 \sigma^{2}} \right\}\prod_{y_{t} = 0}\Phi\left( -\frac{\mathbf{x}_{t}^{\prime} {\boldsymbol \beta}}{\sigma} \right)
+							\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							L(\mathbf{y} | {\boldsymbol \beta}, \sigma^{2},\mathbf{X}) &= \prod_{y_{i} >0} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp\left\{ -\frac{(y_{i} - \mathbf{x}_{i}^{\prime} {\boldsymbol \beta})^{2}}{2 \sigma^{2}} \right\}\prod_{y_{i} = 0}\Phi\left( -\frac{\mathbf{x}_{i}^{\prime} {\boldsymbol \beta}}{\sigma} \right)
+							\end{align*}
+						</font>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">161</td>
+					<td valign="center" rowspan="2">(6.15)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							$\displaystyle \propto \exp\left\{ -\frac{({\boldsymbol \beta} - {\boldsymbol \beta}_{0})^{\prime}\boldsymbol{\Sigma}_{0}({\boldsymbol \beta} - {\boldsymbol \beta}_{0})}{2} \right\}$
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							$\displaystyle \propto \exp\left\{ -\frac{({\boldsymbol \beta} - {\boldsymbol \beta}_{0})^{\prime}\boldsymbol{\Sigma}_{0}^{-1}({\boldsymbol \beta} - {\boldsymbol \beta}_{0})}{2} \right\}$
+						</font>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">161</td>
+					<td valign="center" rowspan="2">(6.16)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							$\displaystyle \pi({\boldsymbol \beta} | \sigma^{2},\mathbf{z},\mathbf{y},\mathbf{X}) \propto \exp\left\{ -\frac{({\boldsymbol \beta} - {\boldsymbol \beta}_{0})^{\prime}\boldsymbol{\Sigma}_{0}({\boldsymbol \beta} - {\boldsymbol \beta}_{0})}{2} \right\}$
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							$\displaystyle \pi({\boldsymbol \beta} | \sigma^{2},\mathbf{z},\mathbf{y},\mathbf{X}) \propto \exp\left\{ -\frac{({\boldsymbol \beta} - {\boldsymbol \beta}_{0})^{\prime}\boldsymbol{\Sigma}_{0}^{-1}({\boldsymbol \beta} - {\boldsymbol \beta}_{0})}{2} \right\}$
+						</font>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">162</td>
+					<td valign="center" rowspan="2">(6.18)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							&\quad \times \left( \sigma^{2} \right)^{-\frac{T}{2}} \exp\left\{ -\frac{(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})}{2 \sigma^{2}} \right\}\\
+							& \propto \left( \sigma^{2} \right)^{-\left( \frac{T + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{y} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{y} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)
+							\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							&\quad \times \left( \sigma^{2} \right)^{-\frac{n}{2}} \exp\left\{ -\frac{(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})}{2 \sigma^{2}} \right\}\\
+							& \propto \left( \sigma^{2} \right)^{-\left( \frac{n + \nu_{0}}{2} + 1 \right)} \exp\left( -\frac{(\mathbf{z} - \mathbf{X} {\boldsymbol \beta})^{\prime}(\mathbf{z} - \mathbf{X} {\boldsymbol \beta}) + \lambda_{0}}{2\sigma^{2}} \right)
+							\end{align*}
+						</font>
+					</td>
 				</tr>
 				<tr>
 					<td valign="center" align="center" rowspan="2">169</td>
@@ -465,6 +580,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2025年12月21日更新</p>
+		<p align="right">2026年1月13日更新</p>
 	</body>
 </html>
