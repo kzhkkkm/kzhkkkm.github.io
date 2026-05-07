@@ -74,6 +74,46 @@
 					<td><font color="red">$\displaystyle \Omega = \sum_{j=1}^{\infty} B_{j}$</font></td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">25</td>
+					<td valign="center" rowspan="2">(2.10)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle f_{p}(y_{n+1}|\mathbf{\theta}) = \int f(y_{n+1}|\mathbf{\theta})\pi(\mathbf{\theta}|\mathbf{y})\mathrm{d}\mathbf{\theta}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle f_{p}(y_{n+1}|\mathbf{y})  = \int f(y_{n+1}|\mathbf{\theta})\pi(\mathbf{\theta}|\mathbf{y})\mathrm{d}\mathbf{\theta}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">25</td>
+					<td valign="center" rowspan="2">(2.10)式の下の式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle f_{p}(x_{11}|p) = \int_{0}^{1}f(x_{11}|p) \pi(p|x_{1},x_{2},\ldots,x_{10})\mathrm{d}p$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle f_{p}(x_{11}|x_{1},x_{2},\ldots,x_{10}) = \int_{0}^{1}f(x_{11}|p) \pi(p|x_{1},x_{2},\ldots,x_{10})\mathrm{d}p$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">26</td>
+					<td valign="center" rowspan="2">(2.12)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle f_{p}(x_{T_{B}+1}|p) = \left( \frac{\alpha_{0} + \sum_{t=1}^{T_{B}}x_{t}}{\alpha_{0} + \beta_{0} + T_{B}} \right)^{x_{T_{B}+1}}\left( 1 - \frac{\alpha_{0} + \sum_{t=1}^{T_{B}}x_{t}}{\alpha_{0} + \beta_{0} + T_{B}} \right)^{1 - x_{T_{B}+1}}$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle f_{p}(x_{T_{B}+1}|\mathbf{x}) = \left( \frac{\alpha_{0} + \sum_{t=1}^{T_{B}}x_{t}}{\alpha_{0} + \beta_{0} + T_{B}} \right)^{x_{T_{B}+1}}\left( 1 - \frac{\alpha_{0} + \sum_{t=1}^{T_{B}}x_{t}}{\alpha_{0} + \beta_{0} + T_{B}} \right)^{1 - x_{T_{B}+1}}$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">28</td>
+					<td valign="center" rowspan="2">16行目</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>であるので，フィッシャー情報量$\mathbf{I}(q)$とその平方根$|\mathbf{I}(q)|^{\frac{1}{2}}$は，<font color="red">$E[z_{t}]=q$</font>を利用すると，</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>であるので，フィッシャー情報量$\mathbf{I}(q)$とその平方根$|\mathbf{I}(q)|^{\frac{1}{2}}$は，<font color="red">$E[z_{t}|q]=q$</font>を利用すると，</td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">31</td>
 					<td valign="center" rowspan="2">図2.4</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -645,6 +685,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2026年1月28日更新</p>
+		<p align="right">2026年5月7日更新</p>
 	</body>
 </html>
