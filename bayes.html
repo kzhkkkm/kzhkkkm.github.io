@@ -144,6 +144,72 @@
 					<td><font color="red">$\displaystyle \frac{\partial^{2} \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \mu \partial \sigma^{2}} = \frac{\partial^{2} \log L(\mathbf{x} | \mu, \sigma^{2})}{\partial \sigma^{2} \partial \mu} = \frac{T \mu - \sum_{t=1}^{T}x_{t}}{\left( \sigma^{2} \right)^{2}}$</font></td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">37-38</td>
+					<td valign="center" rowspan="2">(2.28)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							&\pi(\mu,\sigma^{2}|\mathbf{x})\\
+							&\propto \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{T(\mu - \bar{x})^{2} + \sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\\
+							&\propto \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{T(\mu - \bar{x})^{2}}{2 \sigma^{2}} \right\} \exp\left\{ -\frac{\sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\\
+							&\propto \exp\left\{ -\frac{(\mu - \bar{x})^{2}}{2 T^{-1} \sigma^{2}} \right\} \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{\sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\nonumber\\
+							&\propto \exp\left\{ -\frac{(\mu - \bar{x})^{2}}{2 \hat{\sigma}^{2}} \right\} \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{\hat{\lambda}}{2 \sigma^{2}} \right\}\\
+							&\propto \pi(\mu|\sigma^{2},\mathbf{x}) \pi(\sigma^{2}|\mathbf{x})
+							\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						<font color="red">
+							\begin{align*}
+							&\pi(\mu,\sigma^{2}|\mathbf{x})\\
+							&\propto \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{T(\mu - \bar{x})^{2} + \sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\\
+							&\propto \left( \sigma^{2} \right)^{-\left( \frac{T}{2} + 1 \right)} \exp\left\{ -\frac{T(\mu - \bar{x})^{2}}{2 \sigma^{2}} \right\} \exp\left\{ -\frac{\sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\\
+							&\propto \left( \sigma^{2} \right)^{-\frac{1}{2}}\exp\left\{ -\frac{(\mu - \bar{x})^{2}}{2 T^{-1} \sigma^{2}} \right\} \left( \sigma^{2} \right)^{-\left( \frac{T-1}{2} + 1 \right)} \exp\left\{ -\frac{\sum_{t=1}^{T} ( x_{t} - \bar{x} )^{2}}{2 \sigma^{2}} \right\}\nonumber\\
+							&\propto \exp\left\{ -\frac{(\mu - \bar{x})^{2}}{2 \hat{\sigma}^{2}} \right\} \left( \sigma^{2} \right)^{-\left( \frac{T-1}{2} + 1 \right)} \exp\left\{ -\frac{\hat{\lambda}}{2 \sigma^{2}} \right\}\\
+							&\propto \pi(\mu|\sigma^{2},\mathbf{x}) \pi(\sigma^{2}|\mathbf{x})
+							\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">38</td>
+					<td valign="center" rowspan="2">(2.29)式</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><font color="red">$\displaystyle \sigma^{2} | \mathbf{x} \sim \mathcal{IG}(T/2, \hat{\lambda}/2),\quad \mu | \sigma^{2}, \mathbf{x} \sim \mathcal{N}(\bar{x}, \sigma^{2}/T)$</font></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><font color="red">$\displaystyle \sigma^{2} | \mathbf{x} \sim \mathcal{IG}((T-1)/2, \hat{\lambda}/2),\quad \mu | \sigma^{2}, \mathbf{x} \sim \mathcal{N}(\bar{x}, \sigma^{2}/T)$</font></td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">39-40</td>
+					<td valign="center" rowspan="2">最後のパラグラフ</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>
+						そこで，(2.31)式の結果を用いて，...，$95$%信用区間は<font color="red">$[0.537,0.579]$</font>であることがわかります。...このデータからベイズ分析によって得られたヒストリカル・ボラティリティの大きさは，<font color="red">$0.557$</font>であることがわかります${}^{7}$。つまり，ベイズ分析では，この分析期間においてヒストリカル・ボラティリティの大きさはデータから計算された標準偏差とほぼ同じく<font color="red">$0.557$</font>程度であったということがわかるとともに，標準偏差を計算しただけではわからない，区間<font color="red">$[0.537, 0.579]$</font>...。
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>
+						そこで，(2.31)式の結果を用いて，...，$95$%信用区間は<font color="red">$[0.537,0.580]$</font>であることがわかります。...このデータからベイズ分析によって得られたヒストリカル・ボラティリティの大きさは，<font color="red">$0.558$</font>であることがわかります${}^{7}$。つまり，ベイズ分析では，この分析期間においてヒストリカル・ボラティリティの大きさはデータから計算された標準偏差とほぼ同じく<font color="red">$0.558$</font>程度であったということがわかるとともに，標準偏差を計算しただけではわからない，区間<font color="red">$[0.537, 0.580]$</font>...。
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="center" rowspan="2">40</td>
+					<td valign="center" rowspan="2">図2.6</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td><img src="hv-old.pdf"></td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td><img src="hv.pdf"></td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">41</td>
 					<td valign="center" rowspan="2">(2.32)式</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -685,6 +751,6 @@
 			</tbody>
 		</table>
 		<p>何かお気づきのことがあればお知らせいただければ幸いです。</p>
-		<p align="right">2026年5月7日更新</p>
+		<p align="right">2026年6月8日更新</p>
 	</body>
 </html>
