@@ -469,6 +469,28 @@
 					<td><font color="red">$\displaystyle \pi({\boldsymbol \beta}|\sigma^{2}, \mathbf{y}, \mathbf{X})\propto \exp\left\{ -\frac{({\boldsymbol \beta} - {\boldsymbol \beta}_{0})^{\prime}{\boldsymbol \Sigma}_{0}^{-1}({\boldsymbol \beta} - {\boldsymbol \beta}_{0})}{2}\right\}$</font></td>
 				</tr>
 				<tr>
+					<td valign="center" align="center" rowspan="2">122</td>
+					<td valign="center" rowspan="2">7行目〜</td>
+					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
+					<td>周辺尤度の調和平均推定量の<font color="red">標準誤差</font>($SE_{HM}$)は，
+						<font color="red">
+						\begin{align*}
+						\sigma_{*}^{2} = \frac{1}{n}\sum_{r=1}^{R}\left( \frac{1}{L(\mathbf{y} | {\boldsymbol \theta}^{(r)})} - \frac{1}{\hat{m}(\mathbf{y})} \right)^{2}
+						\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<th valign="center" align="center" bgcolor="#bdbdbd">正</th>
+					<td>周辺尤度の調和平均推定量の<font color="red">漸近標準誤差の推定量</font>($SE_{HM}$)は，
+						<font color="red">
+						\begin{align*}
+						\sigma_{*}^{2} = \frac{1}{R}\sum_{r=1}^{R}\left( \frac{1}{L(\mathbf{y} | {\boldsymbol \theta}^{(r)})} - \frac{1}{\hat{m}(\mathbf{y})} \right)^{2}
+						\end{align*}
+						</font>
+					</td>
+				</tr>
+				<tr>
 					<td valign="center" align="center" rowspan="2">125</td>
 					<td valign="center" rowspan="2">図5.1の凡例</td>
 					<th valign="center" align="center" width="5%" bgcolor="#bdbdbd">誤</th>
@@ -776,6 +798,6 @@
 		本書の誤植発見にご協力いただいた相場俊輔氏(東京大学)をはじめ，多くの読者の皆様に感謝申し上げます。<br>
 		何かお気づきのことがあればお知らせいただければ幸いです。
 		</p>
-		<p align="right">2026年10月15日更新</p>
+		<p align="right">2026年11月12日更新</p>
 	</body>
 </html>
